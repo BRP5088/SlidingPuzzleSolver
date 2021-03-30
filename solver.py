@@ -22,8 +22,6 @@ class Node:
         print()
 
 
-
-
 def check( node ):
     num = [ num for num in range( 1, 10) ]
     index = 0
