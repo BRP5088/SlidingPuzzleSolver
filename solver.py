@@ -1,7 +1,9 @@
+# Date: 3/28/21
+# Desc: This program solves sliding puzzles by making every possible move then reporting back the solution to the puzzle
+
+
 import sys
 import copy # Allows me to make deep copies.
-
-
 
 class Node:
     
@@ -61,8 +63,6 @@ def solve( grid, freespace ):
         row = config.freeSpaceLoc[ 0 ]
         col = config.freeSpaceLoc[ 1 ]
 
-
-
         if row - 1 >= 0:
             topNode = Node( copy.deepcopy( config.grid ), ( row - 1, col), copy.deepcopy( config.stepsLst ) )
             topNode.stepsLst.append( f"Switched ({ row }, { col }) with ({row - 1}, {col})" )
@@ -74,7 +74,6 @@ def solve( grid, freespace ):
             if topNode.grid not in seenConfigs:
                 lst.append( topNode )
                 seenConfigs.append( topNode.grid )
-            # print( f"Top node step list: { topNode.stepsLst }" )
             
 
         if row + 1 < 3:
@@ -112,14 +111,6 @@ def solve( grid, freespace ):
             if rightNode.grid not in seenConfigs:
                 lst.append( rightNode )
                 seenConfigs.append( rightNode.grid )
-
-
-        
-        # print( f"Lst length == { len( lst ) }" )
-        # sys.exit( 123 )
-
-
-
 
 def main():
 
