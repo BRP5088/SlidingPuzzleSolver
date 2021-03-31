@@ -1,8 +1,6 @@
 # Date: 3/28/21
 # Desc: This program solves sliding puzzles by making every possible move then reporting back the solution to the puzzle
 
-
-import sys
 import copy # Allows me to make deep copies.
 
 class Node:
@@ -119,8 +117,6 @@ def main():
                 ]
 
     solve( detective, (1, 1) )
-
-
 
 if __name__ == "__main__":
     main()
